@@ -125,7 +125,7 @@ container_image(
     name = "bazel-remote-image",
     architecture = "amd64",
     base = ":bazel-remote-base",
-    cmd = ["--max_size=5 --access_log_level=all --storage_mode=uncompressed"],
+    cmd = ["--max_size=5", "--access_log_level=all", "--storage_mode=uncompressed"],
     entrypoint = [
         "/app/bazel-remote-base.binary",
         "--http_address=:8080",
